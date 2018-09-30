@@ -13,7 +13,7 @@
       <a routerLinkActive="active" class="nav-link" *ngIf="!_auth.isLoggedIn()" routerLink="/login">Login</a>     
       <a class="nav-link" *ngIf="_auth.isLoggedIn()" href="javascript:void(0)" (click)="doLogout()">Logout</a>
 
-      <a routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="nav-link" routerLink="/scene">Scene</a>
+      <a routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="nav-link" routerLink="/scene">Scene Playground</a>
     </ul>
   </div>
 </nav>
