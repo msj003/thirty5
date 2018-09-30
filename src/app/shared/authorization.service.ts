@@ -3,8 +3,8 @@ import {AuthenticationDetails, CognitoUser, CognitoUserPool} from 'amazon-cognit
 import { Observable } from 'rxjs/Observable';
 
 const poolData = {
-  UserPoolId: '', // Your user pool id here
-  ClientId: '' // Your client id here  
+  UserPoolId: 'us-east-1_Haqn7GoQa', // Your user pool id here
+  ClientId: '11bh62ov3s1k9se262kerodrst' // Your client id here  
 };
 
 const userPool = new CognitoUserPool(poolData);
