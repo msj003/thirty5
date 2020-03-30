@@ -1,0 +1,94 @@
+<!-- <div id="headControls">
+  {{name}}
+  <label for="">Name</label>
+  <input type="text" class="form-control"  [(ngModel)]="name" name="name" id="name" placeholder="" required >
+
+  <button (click)="createScene()">Empty
+  </button>    
+  <button (click)="createBox()">Add Box
+      </button>    
+      <button (click)="updateText()">Update
+          </button>   
+  <br>
+</div> -->
+
+
+
+
+
+<div class="container">
+    <div class="row">
+        <table class="table">
+            <tbody>
+              <tr>
+                <td (click)='tdClick("A")'>A</td>
+                <td (click)='tdClick("B")'>B</td>
+                <td (click)='tdClick("C")'>C</td>
+                <td (click)='tdClick("D")'>D</td>
+              </tr>
+              <tr>
+                  <td (click)='tdClick("E")'>E</td>
+                  <td (click)='tdClick("F")'>F</td>
+                  <td (click)='tdClick("G")'>G</td>
+                  <td (click)='tdClick("H")'>H</td>
+              </tr>
+              <tr>
+                  <td (click)='tdClick("I")'>I</td>
+                  <td (click)='tdClick("J")'>J</td>
+                  <td (click)='tdClick("K")'>K</td>
+                  <td (click)='tdClick("L")'>L</td>
+              </tr>
+              <tr>
+                  <td (click)='tdClick("M")'>M</td>
+                  <td (click)='tdClick("N")'>N</td>
+                  <td (click)='tdClick("O")'>O</td>
+                  <td (click)='tdClick("P")'>P</td>
+              </tr>
+              <tr>
+                  <td (click)='tdClick("Q")'>Q</td>
+                  <td (click)='tdClick("R")'>R</td>
+                  <td (click)='tdClick("S")'>S</td>
+                  <td (click)='tdClick("T")'>T</td>
+              </tr>
+              <tr>
+                  <td (click)='tdClick("U")'>U</td>
+                  <td (click)='tdClick("V")'>V</td>
+                  <td (click)='tdClick("W")'>W</td>
+                  <td (click)='tdClick("X")'>X</td>
+              </tr><tr>
+                  <td></td>
+                  <td (click)='tdClick("Y")'>Y</td>
+                  <td (click)='tdClick("Z")'>Z</td>
+                  <td></td>
+              </tr>
+
+            </tbody>
+          </table>
+
+    </div>
+  
+<br>
+
+  <div class="row">
+    
+    <div class="col-4">
+   
+      <app-main-left
+      [letter]="letter">
+      </app-main-left>
+    
+    </div>
+    <div class="col-8">
+  
+      <app-main-right 
+      [letter]="letter"></app-main-right>
+    </div>
+    
+  </div>
+
+</div>
+
+
+
+
+
