@@ -41,7 +41,6 @@ testem.log
 
 # System Files
 .DS_Store
-<<<<<<< HEAD
 Thumbs.db
 
 #awsmobilejs
@@ -51,15 +50,4 @@ project-info.json
 aws-exports.*
 awsmobilejs/.awsmobile/backend-build
 awsmobilejs/\#current-backend-info
-=======
-Thumbs.db
-
-#awsmobilejs
-appsync-info.json
-aws-info.json
-project-info.json
-aws-exports.*
-awsmobilejs/.awsmobile/backend-build
-awsmobilejs/\#current-backend-info
->>>>>>> 50ebeeec07dced5865746e1cd3223df55adbbd06
 ~awsmobilejs-*/

@@ -22,11 +22,6 @@
     "@angular/platform-browser-dynamic": "^5.2.0",
     "@angular/router": "^5.2.0",
     "@types/three": "^0.92.18",
-<<<<<<< HEAD
-=======
-    "aws-amplify": "^1.0.2",
-    "aws-amplify-angular": "^1.0.1",
->>>>>>> 50ebeeec07dced5865746e1cd3223df55adbbd06
     "core-js": "^2.4.1",
     "rxjs": "^5.5.6",
     "three": "^0.96.0",
