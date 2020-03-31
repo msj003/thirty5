@@ -1,5 +1,6 @@
 <nav class="navbar navbar-expand-md navbar-dark bg-primary fixed-top">
 
+<<<<<<< HEAD
   <a class="navbar-brand" href="">thirty5</a>
   <!-- <button class="navbar-toggler" type="button" >
     <span class="navbar-toggler-icon"></span>
@@ -16,6 +17,22 @@
       <a routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="nav-link" routerLink="/mainscene">Main</a>
 
       <a routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="nav-link" routerLink="/scene">Scene PlayArea</a>
+=======
+  <a class="navbar-brand" href="">Weather Station</a>
+  <button class="navbar-toggler" type="button" >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+    
+  <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+    <ul class="navbar-nav mr-auto">
+      <a routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="nav-link" routerLink="/">Home Page</a>
+      <a routerLinkActive="active" class="nav-link" *ngIf="_auth.isLoggedIn()" routerLink="/restapi">Rest Call</a>
+      <a routerLinkActive="active" class="nav-link" *ngIf="!_auth.isLoggedIn()" routerLink="/register">Register</a>
+      <a routerLinkActive="active" class="nav-link" *ngIf="!_auth.isLoggedIn()" routerLink="/login">Login</a>     
+      <a class="nav-link" *ngIf="_auth.isLoggedIn()" href="javascript:void(0)" (click)="doLogout()">Logout</a>
+
+      <a routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="nav-link" routerLink="/scene">Scene Playground</a>
+>>>>>>> 50ebeeec07dced5865746e1cd3223df55adbbd06
     </ul>
   </div>
 </nav>
