@@ -7,7 +7,6 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { HeaderComponent } from './header/header.component';
 import { AppRoutingModule } from './app-routing.module';
-import {HttpModule} from "@angular/http";
 import { FormsModule } from '../../node_modules/@angular/forms';
 import { AuthorizationService } from './shared/authorization.service';
 import { HomeComponent } from './home/home.component';
@@ -34,7 +33,6 @@ import { MainRightComponent } from './inner-space/main-scene/main-right/main-rig
     BrowserModule, 
     // AmplifyAngularModule,
     AppRoutingModule,
-    HttpModule,
     FormsModule
   ],
   providers: [

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 // import { AuthorizationService } from "../shared/authorization.service";
-import { Http, Headers } from "@angular/http";
+//import { Http, Headers } from "@angular/http";
 
 @Component({
   selector: 'app-home',
@@ -12,7 +12,7 @@ export class HomeComponent implements OnInit {
 
   //constructor(private http: Http, private auth: AuthorizationService) { }
 
-  constructor(private http: Http) { }
+  constructor() { }
 
   ngOnInit() {
   //   var authenticatedUser = this.auth.getAuthenticatedUser();

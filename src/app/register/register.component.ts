@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import {NgForm} from "@angular/forms";
 // import {AuthorizationService} from "../shared/authorization.service";
 import { Router } from '@angular/router';
 
@@ -20,9 +19,7 @@ export class RegisterComponent {
 
   constructor(private _router: Router) { }
 
-  register(form: NgForm) {
-    const email = form.value.email;
-    const password = form.value.password;
+  register() {
     // this.auth.register(email, password).subscribe(
     //   (data) => {        
     //     this.confirmCode = true;
@@ -34,8 +31,8 @@ export class RegisterComponent {
     // );
   }
 
-  validateAuthCode(form: NgForm) {
-    const code = form.value.code;
+  validateAuthCode() {
+    
     
     // this.auth.confirmAuthCode(code).subscribe(
     //   (data) => {

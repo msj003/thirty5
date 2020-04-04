@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 // import {AuthorizationService} from "../shared/authorization.service";
-import {NgForm} from "@angular/forms";
+
 import { Router } from '@angular/router';
 
 @Component({
@@ -22,12 +22,9 @@ export class LoginComponent {
 
   }
 
-  onSubmit(form: NgForm) {
-
-    const email = form.value.email;
-    const password = form.value.password;
+  onSubmit() {
     
-    // this.auth.signIn(email, password).subscribe((data) => {
+// this.auth.signIn(email, password).subscribe((data) => {
     //   this._router.navigateByUrl('/');
     // }, (err)=> {
     //   this.emailVerificationMessage = true;

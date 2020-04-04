@@ -28,6 +28,7 @@ export class SceneComponent implements OnInit {
     controls = null;
     countClicks =  0; 
     // textGeometry = null;
+    amount = 0;
 
     constructor() {
         // this.createScene();
@@ -294,6 +295,8 @@ export class SceneComponent implements OnInit {
         this.createText("Updated : "+ this.countClicks);
 
       }
-    
-    
+
+      onKeyUpName(event: any) { // without type info
+        this.name = event.target.value;
+      }
 }

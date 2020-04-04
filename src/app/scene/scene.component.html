@@ -1,7 +1,7 @@
-<div id="headControls">
+<!-- <div id="headControls">
     {{name}}
     <label for="">Name</label>
-    <input type="text" class="form-control"  [(ngModel)]="name" name="name" id="name" placeholder="" required >
+    
 
     <button (click)="createScene()">Empty
     </button>    
@@ -10,11 +10,22 @@
         <button (click)="updateText()">Update
             </button>   
     <br>
-</div>
+</div> -->
+{{name}}
+<label for="">Name</label>
+<input (keyup)="onKeyUpName($event)">
+<p>{{name}}</p>
+
+    <button (click)="createScene()">Empty
+    </button>    
+    <button (click)="createBox()">Add Box
+        </button>    
+        <button (click)="updateText()">Update
+            </button>   
+    <br>
+
 
 <div  #rendererContainer></div>
 
 Calculator down here
 
-
-<input type="text" class="form-control"  [(ngModel)]="amount" name="amount" id="amount" placeholder="" required >

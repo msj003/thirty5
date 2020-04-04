@@ -1,10 +1,10 @@
-import { GLTFLoader } from 'three/examples/js/loaders/GLTFLoader';
-
 import { Component, OnInit, Input } from '@angular/core';
-
 import { ViewChild, ElementRef} from '@angular/core';
 import * as THREE from 'three';
+import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
+
 import { Mesh } from 'three';
+import { DRACOLoader } from 'three/examples/jsm/loaders/DRACOLoader';
 
 
 const OrbitControls = require('three-orbit-controls')(THREE);
@@ -69,7 +69,8 @@ export class MainRightComponent implements OnInit {
         this.scene.add( this.light );
 
 
-        this.createText("Render Model Here");
+        //this.createText("Render Model Here");
+        this.createModel("A");
 
         // var light2 =    new THREE.PointLight( 0x00ff00, 1, 1000000 );
         // light2.position.set(0,500,0);
@@ -140,7 +141,6 @@ export class MainRightComponent implements OnInit {
             this.scene.add(text);
 
         }.bind(this) );
-
         console.log('Right : ' + this.letter);
       }
 
@@ -157,13 +157,18 @@ export class MainRightComponent implements OnInit {
         this.scene.remove( selectedObject );
 
         // this.createEmptySceneWithBox();
-        this.createText(this.letter);
+        this.createModel(this.letter);
 
       }
 
       createModel( textIn: string ) {
-        // var loader = new GLTFLoader();
-
+        console.log( 'Loading Model ... ' );
+        let loader = new GLTFLoader();
+        loader.load( '../../assets/models/apple/scene.gltf' , ( gltf ) => {
+        console.log( gltf );
+        this.scene.add(gltf.scene);
+        gltf.scene.scale.multiplyScalar(7);
+        });
 
         // console.log('Right : ' + this.letter);
       }
