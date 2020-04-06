@@ -51,7 +51,7 @@ export class MainRightComponent implements OnInit {
     }
 
     ngAfterViewInit() {
-        this.renderer.setSize(window.innerWidth/4, window.innerHeight/4);
+        this.renderer.setSize(window.innerWidth/2.1, window.innerHeight/2.1);
 
         this.rendererContainer.nativeElement.appendChild(this.renderer.domElement);
         this.animate();
@@ -70,7 +70,7 @@ export class MainRightComponent implements OnInit {
 
 
         //this.createText("Render Model Here");
-        this.createModel("A");
+        //this.createModel("A");
 
         // var light2 =    new THREE.PointLight( 0x00ff00, 1, 1000000 );
         // light2.position.set(0,500,0);
@@ -147,29 +147,43 @@ export class MainRightComponent implements OnInit {
       // update the model on letter change.
       updateModel( model_letter: string){
         // setTimeout(this.updateText, 1000);
-        for( var i = this.scene.children.length - 1; i >= 0; i--) { 
+        for ( var i = this.scene.children.length - 1; i >= 0; i--) {
             var obj = this.scene.children[i];
-         //   this.scene.remove(obj);
+            this.scene.remove(obj);
          console.log(obj);
         }
-        var objName = "text";
-        var selectedObject = this.scene.getObjectByName(objName);
-        this.scene.remove( selectedObject );
+        // var objName = "text";
+        // var selectedObject = this.scene.getObjectByName(objName);
+        // this.scene.remove( selectedObject );
 
         // this.createEmptySceneWithBox();
+        this.createScene();
         this.createModel(this.letter);
 
       }
 
       createModel( textIn: string ) {
-        console.log( 'Loading Model ... ' );
+        console.log( 'Loading Model ... '  + textIn);
         let loader = new GLTFLoader();
-        loader.load( '../../assets/models/apple/scene.gltf' , ( gltf ) => {
+        loader.load( this.getModelLocation(textIn) , ( gltf ) => {
         console.log( gltf );
         this.scene.add(gltf.scene);
-        gltf.scene.scale.multiplyScalar(7);
+        //gltf.scene.scale.multiplyScalar(4);
         });
 
         // console.log('Right : ' + this.letter);
+      }
+
+      getModelLocation( letter: string ) {
+        let modelLocationHash = {};
+        modelLocationHash['A'] = '../../assets/models/apple/scene.gltf';
+        modelLocationHash['B'] = '../../assets/models/chocobo/scene.gltf';
+
+        console.log( modelLocationHash['letter']);
+        return modelLocationHash[letter];
+      }
+
+      clearScene() {
+
       }
 }

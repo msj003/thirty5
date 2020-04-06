@@ -46,7 +46,7 @@ export class MainLeftComponent implements OnInit {
     }
 
     ngAfterViewInit() {
-        this.renderer.setSize(window.innerWidth/4, window.innerHeight/4);
+        this.renderer.setSize(window.innerWidth/2.1, window.innerHeight/2.1);
 
         this.rendererContainer.nativeElement.appendChild(this.renderer.domElement);
         this.animate();
