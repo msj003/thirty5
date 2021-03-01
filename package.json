@@ -24,7 +24,7 @@
     "core-js": "^3.6.4",
     "bootstrap": "^4.4.1",
     "rxjs": "~6.5.5",
-    "three": "^0.115.0",
+    "three": "^0.125.0",
     "three-gltf-loader": "^1.111.0",
     "three-orbit-controls": "^82.1.0",
     "tslib": "^1.10.0",
